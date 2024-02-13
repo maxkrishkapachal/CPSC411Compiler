@@ -1,0 +1,84 @@
+int janson(int red){
+	int blue;
+	blue = 0;
+	prints("blue = ");
+	printi(blue);
+	prints("\n");
+	
+	while(red <= 5){		
+		blue = blue + red;
+		prints("blue = ");
+		printi(blue);
+		prints("\n");
+		
+		if(blue == 0){
+			prints("break\n");
+			break;
+		}
+		if(blue == 2) {
+			prints("break\n");
+			break;
+		}
+		if(blue == 9) {
+			prints("break\n");
+			break;
+		}
+		if(blue == 10) {
+			prints("break\n");
+			break;
+		}
+		if(blue == 16) {
+			prints("break\n");
+			break;
+		}
+	}
+	return blue;
+	
+}
+
+main(){
+	int red;
+	
+	red = 0;
+	prints("red = 0\n");
+	red = janson(red);
+	prints("red = ");
+	printi(red);
+	prints("\n");
+	
+	red = 1;
+	prints("red = 1\n");
+	red = janson(red);
+	prints("red = ");
+	printi(red);
+	prints("\n");
+	
+	red = 2;
+	prints("red = 2\n");
+	red = janson(red);
+	prints("red = ");
+	printi(red);
+	prints("\n");
+	
+	red = 3;
+	prints("red = 3\n");
+	red = janson(red);
+	prints("red = ");
+	printi(red);
+	prints("\n");
+	
+	red = 4;
+	prints("red = 4\n");
+	red = janson(red);
+	prints("red = ");
+	printi(red);
+	prints("\n");
+	
+	red = 5;
+	prints("red = 5\n");
+	red = janson(red);
+	prints("red = ");
+	printi(red);
+	prints("\n");
+	
+}

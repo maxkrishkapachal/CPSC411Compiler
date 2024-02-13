@@ -1,0 +1,39 @@
+main(){
+	janson(false, false, false, false);
+	janson(false, false, false, true);
+	janson(false, false, true, false);
+	janson(false, false, true, true);
+	janson(false, true, false, false);
+	janson(false, true, false, true);
+	janson(false, true, true, false);
+	janson(false, true, true, true);
+	janson(true, false, false, false);
+	janson(true, false, false, true);
+	janson(true, false, true, false);
+	janson(true, false, true, true);
+	janson(true, true, false, false);
+	janson(true, true, false, true);
+	janson(true, true, true, false);
+	janson(true, true, true, true);
+}
+
+void janson(boolean red, boolean blue, boolean yellow, boolean green){
+	prints("(");
+	printb(red);
+	prints(" && ");
+	printb(blue);
+	prints(") || (");
+	printb(green);
+	prints(" || (");
+	printb(yellow);
+	prints(" && ");
+	printb(blue);
+	prints(")) = ");
+	
+	if((red && blue) || (green || (yellow && blue))){
+		prints("true.\n");
+	}
+	else{
+		prints("false.\n");
+	}
+}

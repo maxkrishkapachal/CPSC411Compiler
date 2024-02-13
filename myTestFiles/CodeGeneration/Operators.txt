@@ -1,0 +1,430 @@
+max(){
+	boolean red;
+	boolean blue;
+	boolean yellow;
+	int green;
+	int orange;
+	int purple;
+	
+	
+	
+	prints("And &&\n-------\n");
+	
+	
+	
+	red = true;
+	blue = true;
+	
+	prints("bool red: ");
+	printb(red);
+	
+	prints("\nbool blue: ");
+	printb(blue);
+
+	if(red && blue){ //----------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\nred && blue: ");
+	printb(yellow);
+	
+	blue = false;
+	prints("\nbool blue: ");
+	printb(blue);
+
+	if(red && blue){ //----------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\nred && blue: ");
+	printb(yellow);
+	
+	
+	
+	prints("\n-------\nOr ||\n-------\n");	
+	
+	
+	
+	red = true;
+	blue = false;
+	
+	prints("bool red: ");
+	printb(red);
+	
+	prints("\nbool blue: ");
+	printb(blue);
+
+	if(red || blue){ //----------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\nred || blue: ");
+	printb(yellow);
+
+	blue = true;
+	prints("\nbool blue: ");
+	printb(blue);
+
+	if(red || blue){ //----------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\nred || blue: ");
+	printb(yellow);
+	
+	red = false;
+	blue = false;
+	
+	prints("\nbool red: ");
+	printb(red);
+	
+	prints("\nbool blue: ");
+	printb(blue);
+	
+
+	if(red || blue){ //----------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\nred || blue: ");
+	printb(yellow);
+	
+	
+	
+	prints("\n-------\nNot !\n-------\n");	
+	
+	
+	
+	blue = true;
+	
+	prints("bool blue: ");
+	printb(blue);
+	
+	blue = !blue;
+	
+	prints("\n!blue: ");
+	printb(blue);
+	
+	
+	
+	prints("\n-------\nMult *\n-------\n");
+	
+	
+	
+	green = 4;
+	purple = 2;
+	
+	printi(green);
+	prints(" * ");
+	printi(purple);
+	
+	prints(" = ");	
+	orange = green * purple; //-----------------------------------------------------
+	printi(orange);
+	
+	
+	
+	prints("\n-------\nDiv /\n-------\n");
+	
+	
+	
+	green = 4;
+	purple = 2;
+	
+	printi(green);
+	prints(" / ");
+	printi(purple);
+	
+	prints(" = ");	
+	orange = green / purple; //-----------------------------------------------------
+	printi(orange);
+	
+	
+	
+	prints("\n-------\nRem %\n-------\n");
+	
+	
+		
+	green = 4;
+	purple = 2;
+	
+	printi(green);
+	prints(" % ");
+	printi(purple);
+	
+	prints(" = ");
+	orange = green % purple; //-----------------------------------------------------
+	printi(orange);
+	
+	
+	
+	prints("\n-------\nPlus +\n-------\n");
+	
+	
+		
+	green = 4;
+	purple = 2;
+	
+	printi(green);
+	prints(" + ");
+	printi(purple);
+	prints(" = ");
+	
+	orange = green + purple; //-----------------------------------------------------
+	printi(orange);
+	
+	
+	
+	prints("\n-------\nMinus -\n-------\n");
+	
+	
+	
+	green = 4;
+	purple = 2;
+	
+	printi(green);
+	prints(" - ");
+	printi(purple);
+	
+	prints(" = ");	
+	orange = green - purple; //-----------------------------------------------------
+	printi(orange);
+	
+	
+	
+	prints("\n-------\nNegation -\n-------\n");
+	
+	
+	
+	green = -3; 
+	
+	prints("green: ");
+	printi(green);
+	
+	prints("\n-green: ");
+	printi(-green);
+	
+	
+	
+	prints("\n-------\nEqual ==\n-------\n");
+	
+	
+
+
+	green = 3;
+	purple = 3;
+	yellow = true;
+	
+	prints("int green: ");
+	printi(green);
+	
+	prints("\nint purple: ");
+	printi(purple);
+
+	if(green == purple){ //----------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\ngreen == purple: ");
+	printb(yellow);
+	
+	purple = 4;
+	prints("\npurple: ");
+	printi(purple);
+	
+	if(purple == green){ //----------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\npurple == green: ");
+	printb(yellow);
+	
+	
+	
+	prints("\n-------\nNot Equal !=\n-------\n");
+	
+	
+
+	green = 4;
+	purple = 3;
+	yellow = false;
+	
+	prints("int green: ");
+	printi(green);
+	
+	prints("\nint purple: ");
+	printi(purple);
+	
+	if(green != purple){ //----------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\ngreen != purple: ");
+	printb(yellow);
+	
+	purple = 4;
+	prints("\nint purple: ");
+	printi(purple);
+	
+	if(purple != green){ //----------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\npurple != green: ");
+	printb(yellow);
+	
+	
+	
+	prints("\n-------\nGreater Than >\n-------\n");
+	
+	
+
+	green = 2;
+	purple = 3;
+	
+	prints("int green: ");
+	printi(green);
+	
+	prints("\nint purple: ");
+	printi(purple);
+	
+	if(purple > green){ //-----------------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\npurple > green: ");
+	printb(yellow);
+	
+	
+	
+	prints("\n-------\nGreater Than or Equal >=\n-------\n");
+	
+	
+	
+	green = 2;
+	purple = 3;
+	
+	prints("int green: ");
+	printi(green);
+	
+	prints("\nint purple: ");
+	printi(purple);
+	
+	if(purple >= green){ //-----------------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\npurple >= green: ");
+	printb(yellow);
+
+	green = 3;
+	prints("\nint green: ");
+	printi(green);
+	
+	if(purple >= green){ //-----------------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\npurple >= green: ");
+	printb(yellow);
+	
+	
+	
+	prints("\n-------\nLess Than <\n-------\n");
+	
+	
+	
+	green = 3;
+	purple = 2;
+	
+	prints("int green: ");
+	printi(green);
+	
+	prints("\nint purple: ");
+	printi(purple);
+	
+	if(purple < green){ //-----------------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\npurple < green: ");
+	printb(yellow);
+	
+	
+	
+	prints("\n-------\nLess Than or Equal <=\n-------\n");
+	
+	
+	
+	green = 3;
+	purple = 2;
+	
+	prints("int green: ");
+	printi(green);
+	
+	prints("\nint purple: ");
+	printi(purple);
+	
+	if(purple <= green){ //-----------------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\npurple <= green: ");
+	printb(yellow);
+
+	green = 2;
+	prints("\nint green: ");
+	printi(green);
+	
+	if(purple <= green){ //-----------------------------------------------------
+		yellow = true;
+	}
+	else {
+		yellow = false;
+	}
+	
+	prints("\npurple <= green: ");
+	printb(yellow);
+}

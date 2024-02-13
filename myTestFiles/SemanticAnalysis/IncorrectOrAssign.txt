@@ -1,0 +1,47 @@
+// this is testing function calls, parameters, and arguments
+
+max(){
+    int red;
+    boolean blue;
+    if(janson(red)){
+        red = red + 3;
+    }
+    
+    red = 2;
+    blue = true;
+    blue = true || red; //--------------------------------------------
+    
+    while(krishka(red, blue) == 3){
+        red = red + 1;
+    }
+}
+
+boolean janson(int red){	
+    if(red == 1){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+//random comments
+
+int krishka(int red, boolean blue){
+    int green;
+    if(blue == true){
+        return red + 1;
+    }
+    else{
+        green = 4;
+        pachal(red, blue, green);
+        return red + green + 1; //I am commenting
+    }
+}
+
+void pachal(int red, boolean blue, int green){
+    int purple;
+    purple = red * green;
+    if(blue){
+        purple = purple + 3;
+    }	
+}

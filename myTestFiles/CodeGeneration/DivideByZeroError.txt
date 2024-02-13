@@ -1,0 +1,16 @@
+max(){
+	int red;
+	int blue;
+	int yellow;
+	
+	red = 5;
+	blue = 0;
+	
+	printi(red);
+	prints(" / ");
+	printi(blue);
+	
+	prints(" = ");
+	yellow = red / blue; //-----------------------------------------------------
+	printi(yellow);
+}

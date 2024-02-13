@@ -1,0 +1,13 @@
+max(){
+	boolean red;
+	boolean blue;
+
+	red = true;
+	blue = false;
+
+	prints("red: ");
+	printb(red); //-------------------------------------------------
+	
+	prints("\nblue: ");
+	printb(blue); //-------------------------------------------------
+}

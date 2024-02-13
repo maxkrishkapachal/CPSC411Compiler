@@ -1,0 +1,22 @@
+int red;
+
+main(){
+	red = 5;
+	
+	prints("red = ");
+	printi(red);
+	prints("\n");
+	
+	prints("Calling halt()...\n");
+	halt();
+	
+	prints("red = ");
+	printi(red);
+	prints("\n");
+	
+}
+
+void halt(){
+	red = red * 5;
+}
+	

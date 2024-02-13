@@ -1,0 +1,8 @@
+max(){
+	int c;
+	prints("Feed me: ");
+	c = getchar(); //-------------------------------------------------
+	prints("\nThank you, here is your char: ");
+	printc(c);
+	prints("\n");
+}

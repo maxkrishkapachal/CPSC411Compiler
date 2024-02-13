@@ -1,0 +1,21 @@
+int red;
+boolean blue;
+
+max(){
+	int yellow;
+	int blue;
+	int red;
+	
+	red = 4;
+	blue = 6;
+	
+	printi(red);
+	prints(" + ");
+	printi(blue);
+	
+	yellow = red + blue;
+	prints(" = ");
+	printi(yellow);
+	
+	prints("\n");
+}

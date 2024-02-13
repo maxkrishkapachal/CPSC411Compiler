@@ -1,0 +1,54 @@
+max(){
+	int yellow;
+	int blue;
+	
+	yellow = 9;
+	blue = 7;
+	
+	prints("yellow: ");
+	printi(yellow);
+	
+	prints("\nConstant argument: ");
+	yellow = janson(9); //-----------------------------------------------------
+	
+	printi(yellow);
+	
+	prints("\nVariable argument: ");
+	yellow = janson(blue); //-----------------------------------------------------
+	
+	printi(yellow);	
+	
+	prints("\nFunction call argument with no nested arguments: ");
+	yellow = janson(pachal()); //-----------------------------------------------------
+	
+	printi(yellow);
+	
+	prints("\nFunction call argument with nested arguments: ");
+	yellow = janson(krishka(blue, blue)); //-----------------------------------------------------
+	
+	printi(yellow);
+	
+	prints("\nMany nested arguments and function calls: ");
+	yellow = maximilian(krishka(3, 8), pachal(), janson(krishka(blue, 4))); //-----------------------------------------------------
+	
+	printi(yellow);
+	
+	prints("\n");
+}
+
+int janson(int red){
+	return red + 3;
+}
+
+int krishka(int blue, int red){
+	blue = blue * red;
+	return blue;
+}
+
+int pachal(){
+	return 4;
+}
+
+int maximilian(int red, int blue, int yellow){
+	return red * blue + yellow;
+}

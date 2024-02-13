@@ -1,0 +1,3217 @@
+        .text
+        .globl main
+main:
+        jal      M0
+        li       $v0, 10
+        syscall
+
+
+M0:
+        subu     $sp, $sp, 4
+        sw       $ra, 0($sp)
+        jal      F0
+
+
+L0:
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 4
+        jr       $ra
+
+F0:
+        subu     $sp, $sp, 16
+        sw       $ra, 0($sp)
+        li       $t0, 0
+        sw       $t0, 4($sp)
+L2:
+        lw       $t0, 4($sp)
+        li       $t1, 21
+        slt      $t0, $t0, $t1
+        beqz     $t0, Q0
+        j        Q1
+Q0:
+        j        L5
+Q1:
+        li       $t0, 0
+        sw       $t0, 8($sp)
+L6:
+        lw       $t0, 8($sp)
+        li       $t1, 75
+        slt      $t0, $t0, $t1
+        beqz     $t0, Q2
+        j        Q3
+Q2:
+        j        L9
+Q3:
+        li       $t0, 0
+        sw       $t0, 12($sp)
+L10:
+        lw       $t0, 4($sp)
+        li       $t1, 0
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 11
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 15
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 36
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 40
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q4
+        j        Q5
+Q4:
+        j        L29
+Q5:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L30:
+        .byte 95, 0
+        .align 2
+        .text
+        la       $t0, L30
+        move     $a0, $t0
+        jal      R5
+
+        j        L31
+L29:
+L32:
+        lw       $t0, 4($sp)
+        li       $t1, 1
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 59
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 64
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q6
+        j        Q7
+Q6:
+        j        L43
+Q7:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L44:
+        .byte 95, 0
+        .align 2
+        .text
+        la       $t0, L44
+        move     $a0, $t0
+        jal      R5
+
+        j        L45
+L43:
+L46:
+        lw       $t0, 4($sp)
+        li       $t1, 2
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 13
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 16
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q8
+        j        Q9
+Q8:
+        j        L57
+Q9:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L58:
+        .byte 95, 0
+        .align 2
+        .text
+        la       $t0, L58
+        move     $a0, $t0
+        jal      R5
+
+        j        L59
+L57:
+L60:
+        lw       $t0, 4($sp)
+        li       $t1, 6
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 35
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 36
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q10
+        j        Q11
+Q10:
+        j        L71
+Q11:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L72:
+        .byte 95, 0
+        .align 2
+        .text
+        la       $t0, L72
+        move     $a0, $t0
+        jal      R5
+
+        j        L73
+L71:
+L74:
+        lw       $t0, 4($sp)
+        li       $t1, 8
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 14
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 23
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 17
+        sne      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q12
+        j        Q13
+Q12:
+        j        L89
+Q13:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L90:
+        .byte 95, 0
+        .align 2
+        .text
+        la       $t0, L90
+        move     $a0, $t0
+        jal      R5
+
+        j        L91
+L89:
+L92:
+        lw       $t0, 4($sp)
+        li       $t1, 9
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 52
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 57
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 62
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 73
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 65
+        sne      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 69
+        sne      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q14
+        j        Q15
+Q14:
+        j        L119
+Q15:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L120:
+        .byte 95, 0
+        .align 2
+        .text
+        la       $t0, L120
+        move     $a0, $t0
+        jal      R5
+
+        j        L121
+L119:
+L122:
+        lw       $t0, 4($sp)
+        li       $t1, 10
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 21
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 24
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 46
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 49
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q16
+        j        Q17
+Q16:
+        j        L141
+Q17:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L142:
+        .byte 95, 0
+        .align 2
+        .text
+        la       $t0, L142
+        move     $a0, $t0
+        jal      R5
+
+        j        L143
+L141:
+L144:
+        lw       $t0, 4($sp)
+        li       $t1, 11
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 70
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 73
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q18
+        j        Q19
+Q18:
+        j        L155
+Q19:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L156:
+        .byte 95, 0
+        .align 2
+        .text
+        la       $t0, L156
+        move     $a0, $t0
+        jal      R5
+
+        j        L157
+L155:
+L158:
+        lw       $t0, 4($sp)
+        li       $t1, 12
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 4
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 7
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 29
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 32
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q20
+        j        Q21
+Q20:
+        j        L177
+Q21:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L178:
+        .byte 95, 0
+        .align 2
+        .text
+        la       $t0, L178
+        move     $a0, $t0
+        jal      R5
+
+        j        L179
+L177:
+L180:
+        lw       $t0, 4($sp)
+        li       $t1, 19
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 62
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 64
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q22
+        j        Q23
+Q22:
+        j        L191
+Q23:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L192:
+        .byte 95, 0
+        .align 2
+        .text
+        la       $t0, L192
+        move     $a0, $t0
+        jal      R5
+
+        j        L193
+L191:
+L194:
+        lw       $t0, 4($sp)
+        li       $t1, 20
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 12
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 15
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 37
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 40
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q24
+        j        Q25
+Q24:
+        j        L213
+Q25:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L214:
+        .byte 95, 0
+        .align 2
+        .text
+        la       $t0, L214
+        move     $a0, $t0
+        jal      R5
+
+L213:
+L193:
+L179:
+L157:
+L143:
+L121:
+L91:
+L73:
+L59:
+L45:
+L31:
+L215:
+        lw       $t0, 4($sp)
+        li       $t1, 1
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 10
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 35
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q26
+        j        Q27
+Q26:
+        j        L226
+Q27:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L227:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L227
+        move     $a0, $t0
+        jal      R5
+
+        j        L228
+L226:
+L229:
+        lw       $t0, 4($sp)
+        li       $t1, 2
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 9
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 34
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q28
+        j        Q29
+Q28:
+        j        L240
+Q29:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L241:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L241
+        move     $a0, $t0
+        jal      R5
+
+        j        L242
+L240:
+L243:
+        lw       $t0, 4($sp)
+        li       $t1, 3
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 8
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 33
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q30
+        j        Q31
+Q30:
+        j        L254
+Q31:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L255:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L255
+        move     $a0, $t0
+        jal      R5
+
+        j        L256
+L254:
+L257:
+        lw       $t0, 4($sp)
+        li       $t1, 4
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 7
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 32
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q32
+        j        Q33
+Q32:
+        j        L268
+Q33:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L269:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L269
+        move     $a0, $t0
+        jal      R5
+
+        j        L270
+L268:
+L271:
+        lw       $t0, 4($sp)
+        li       $t1, 5
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 6
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 31
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 35
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q34
+        j        Q35
+Q34:
+        j        L286
+Q35:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L287:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L287
+        move     $a0, $t0
+        jal      R5
+
+        j        L288
+L286:
+L289:
+        lw       $t0, 4($sp)
+        li       $t1, 6
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 5
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 9
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 30
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 34
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q36
+        j        Q37
+Q36:
+        j        L308
+Q37:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L309:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L309
+        move     $a0, $t0
+        jal      R5
+
+        j        L310
+L308:
+L311:
+        lw       $t0, 4($sp)
+        li       $t1, 7
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 4
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 8
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 29
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q38
+        j        Q39
+Q38:
+        j        L326
+Q39:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L327:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L327
+        move     $a0, $t0
+        jal      R5
+
+        j        L328
+L326:
+L329:
+        lw       $t0, 4($sp)
+        li       $t1, 8
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 3
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 7
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 28
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q40
+        j        Q41
+Q40:
+        j        L344
+Q41:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L345:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L345
+        move     $a0, $t0
+        jal      R5
+
+        j        L346
+L344:
+L347:
+        lw       $t0, 4($sp)
+        li       $t1, 9
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 2
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 6
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 27
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 31
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q42
+        j        Q43
+Q42:
+        j        L366
+Q43:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L367:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L367
+        move     $a0, $t0
+        jal      R5
+
+        j        L368
+L366:
+L369:
+        lw       $t0, 4($sp)
+        li       $t1, 10
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 1
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 5
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 26
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 30
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q44
+        j        Q45
+Q44:
+        j        L388
+Q45:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L389:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L389
+        move     $a0, $t0
+        jal      R5
+
+        j        L390
+L388:
+L391:
+        lw       $t0, 4($sp)
+        li       $t1, 11
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 4
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 9
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 16
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 20
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 25
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 29
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 41
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 45
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 50
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q46
+        j        Q47
+Q46:
+        j        L430
+Q47:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L431:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L431
+        move     $a0, $t0
+        jal      R5
+
+        j        L432
+L430:
+L433:
+        lw       $t0, 4($sp)
+        li       $t1, 12
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 3
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 8
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 15
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 19
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 24
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 28
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 33
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 40
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 44
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 49
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q48
+        j        Q49
+Q48:
+        j        L476
+Q49:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L477:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L477
+        move     $a0, $t0
+        jal      R5
+
+        j        L478
+L476:
+L479:
+        lw       $t0, 4($sp)
+        li       $t1, 13
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 14
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 18
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 23
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 43
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 48
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q50
+        j        Q51
+Q50:
+        j        L502
+Q51:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L503:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L503
+        move     $a0, $t0
+        jal      R5
+
+        j        L504
+L502:
+L505:
+        lw       $t0, 4($sp)
+        li       $t1, 14
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 13
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 17
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 22
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 42
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 47
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q52
+        j        Q53
+Q52:
+        j        L528
+Q53:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L529:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L529
+        move     $a0, $t0
+        jal      R5
+
+        j        L530
+L528:
+L531:
+        lw       $t0, 4($sp)
+        li       $t1, 15
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 12
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 16
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 21
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 37
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 41
+        seq      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 46
+        seq      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q54
+        j        Q55
+Q54:
+        j        L558
+Q55:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L559:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L559
+        move     $a0, $t0
+        jal      R5
+
+        j        L560
+L558:
+L561:
+        lw       $t0, 4($sp)
+        li       $t1, 16
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 11
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 15
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 20
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 36
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 40
+        seq      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 45
+        seq      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q56
+        j        Q57
+Q56:
+        j        L588
+Q57:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L589:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L589
+        move     $a0, $t0
+        jal      R5
+
+        j        L590
+L588:
+L591:
+        lw       $t0, 4($sp)
+        li       $t1, 17
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 10
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 14
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 19
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 35
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 39
+        seq      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 44
+        seq      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q58
+        j        Q59
+Q58:
+        j        L618
+Q59:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L619:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L619
+        move     $a0, $t0
+        jal      R5
+
+        j        L620
+L618:
+L621:
+        lw       $t0, 4($sp)
+        li       $t1, 18
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 9
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 13
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 18
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 34
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 38
+        seq      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 43
+        seq      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q60
+        j        Q61
+Q60:
+        j        L648
+Q61:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L649:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L649
+        move     $a0, $t0
+        jal      R5
+
+        j        L650
+L648:
+L651:
+        lw       $t0, 4($sp)
+        li       $t1, 19
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 12
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 17
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 37
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 42
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q62
+        j        Q63
+Q62:
+        j        L670
+Q63:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L671:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L671
+        move     $a0, $t0
+        jal      R5
+
+        j        L672
+L670:
+L673:
+        lw       $t0, 4($sp)
+        li       $t1, 20
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 11
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 16
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 36
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 41
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q64
+        j        Q65
+Q64:
+        j        L692
+Q65:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L693:
+        .byte 47, 0
+        .align 2
+        .text
+        la       $t0, L693
+        move     $a0, $t0
+        jal      R5
+
+L692:
+L672:
+L650:
+L620:
+L590:
+L560:
+L530:
+L504:
+L478:
+L432:
+L390:
+L368:
+L346:
+L328:
+L310:
+L288:
+L270:
+L256:
+L242:
+L228:
+L694:
+        lw       $t0, 4($sp)
+        li       $t1, 1
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 11
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 16
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 36
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 41
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q66
+        j        Q67
+Q66:
+        j        L713
+Q67:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L714:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L714
+        move     $a0, $t0
+        jal      R5
+
+        j        L715
+L713:
+L716:
+        lw       $t0, 4($sp)
+        li       $t1, 2
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 12
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 17
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 37
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 42
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q68
+        j        Q69
+Q68:
+        j        L735
+Q69:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L736:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L736
+        move     $a0, $t0
+        jal      R5
+
+        j        L737
+L735:
+L738:
+        lw       $t0, 4($sp)
+        li       $t1, 3
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 38
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 43
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q70
+        j        Q71
+Q70:
+        j        L749
+Q71:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L750:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L750
+        move     $a0, $t0
+        jal      R5
+
+        j        L751
+L749:
+L752:
+        lw       $t0, 4($sp)
+        li       $t1, 4
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 39
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 44
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q72
+        j        Q73
+Q72:
+        j        L763
+Q73:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L764:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L764
+        move     $a0, $t0
+        jal      R5
+
+        j        L765
+L763:
+L766:
+        lw       $t0, 4($sp)
+        li       $t1, 5
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 36
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 40
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 45
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q74
+        j        Q75
+Q74:
+        j        L781
+Q75:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L782:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L782
+        move     $a0, $t0
+        jal      R5
+
+        j        L783
+L781:
+L784:
+        lw       $t0, 4($sp)
+        li       $t1, 6
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 37
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 41
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 46
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q76
+        j        Q77
+Q76:
+        j        L799
+Q77:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L800:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L800
+        move     $a0, $t0
+        jal      R5
+
+        j        L801
+L799:
+L802:
+        lw       $t0, 4($sp)
+        li       $t1, 7
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 34
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 38
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 42
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 47
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q78
+        j        Q79
+Q78:
+        j        L821
+Q79:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L822:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L822
+        move     $a0, $t0
+        jal      R5
+
+        j        L823
+L821:
+L824:
+        lw       $t0, 4($sp)
+        li       $t1, 8
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 35
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 39
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 43
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 48
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q80
+        j        Q81
+Q80:
+        j        L843
+Q81:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L844:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L844
+        move     $a0, $t0
+        jal      R5
+
+        j        L845
+L843:
+L846:
+        lw       $t0, 4($sp)
+        li       $t1, 9
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 19
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 24
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 32
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 36
+        seq      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 40
+        seq      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 44
+        seq      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 49
+        seq      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q82
+        j        Q83
+Q82:
+        j        L877
+Q83:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L878:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L878
+        move     $a0, $t0
+        jal      R5
+
+        j        L879
+L877:
+L880:
+        lw       $t0, 4($sp)
+        li       $t1, 10
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 20
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 25
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 33
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 37
+        seq      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 41
+        seq      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 45
+        seq      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 50
+        seq      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q84
+        j        Q85
+Q84:
+        j        L911
+Q85:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L912:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L912
+        move     $a0, $t0
+        jal      R5
+
+        j        L913
+L911:
+L914:
+        lw       $t0, 4($sp)
+        li       $t1, 11
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 1
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 26
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 34
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 38
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q86
+        j        Q87
+Q86:
+        j        L933
+Q87:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L934:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L934
+        move     $a0, $t0
+        jal      R5
+
+        j        L935
+L933:
+L936:
+        lw       $t0, 4($sp)
+        li       $t1, 12
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 2
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 27
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 35
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 39
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q88
+        j        Q89
+Q88:
+        j        L955
+Q89:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L956:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L956
+        move     $a0, $t0
+        jal      R5
+
+        j        L957
+L955:
+L958:
+        lw       $t0, 4($sp)
+        li       $t1, 13
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 36
+        seq      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q90
+        j        Q91
+Q90:
+        j        L965
+Q91:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L966:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L966
+        move     $a0, $t0
+        jal      R5
+
+        j        L967
+L965:
+L968:
+        lw       $t0, 4($sp)
+        li       $t1, 14
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 37
+        seq      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q92
+        j        Q93
+Q92:
+        j        L975
+Q93:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L976:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L976
+        move     $a0, $t0
+        jal      R5
+
+        j        L977
+L975:
+L978:
+        lw       $t0, 4($sp)
+        li       $t1, 19
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 9
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 34
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q94
+        j        Q95
+Q94:
+        j        L989
+Q95:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L990:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L990
+        move     $a0, $t0
+        jal      R5
+
+        j        L991
+L989:
+L992:
+        lw       $t0, 4($sp)
+        li       $t1, 20
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 10
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 35
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q96
+        j        Q97
+Q96:
+        j        L1003
+Q97:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1004:
+        .byte 92, 0
+        .align 2
+        .text
+        la       $t0, L1004
+        move     $a0, $t0
+        jal      R5
+
+L1003:
+L991:
+L977:
+L967:
+L957:
+L935:
+L913:
+L879:
+L845:
+L823:
+L801:
+L783:
+L765:
+L751:
+L737:
+L715:
+L1005:
+        lw       $t0, 4($sp)
+        li       $t1, 2
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 10
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 11
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 35
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 36
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q98
+        j        Q99
+Q98:
+        j        L1032
+Q99:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1033:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1033
+        move     $a0, $t0
+        jal      R5
+
+        j        L1034
+L1032:
+L1035:
+        lw       $t0, 4($sp)
+        li       $t1, 3
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 9
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 12
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 34
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 37
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q100
+        j        Q101
+Q100:
+        j        L1062
+Q101:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1063:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1063
+        move     $a0, $t0
+        jal      R5
+
+        j        L1064
+L1062:
+L1065:
+        lw       $t0, 4($sp)
+        li       $t1, 4
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 8
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 12
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 33
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 38
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q102
+        j        Q103
+Q102:
+        j        L1092
+Q103:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1093:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1093
+        move     $a0, $t0
+        jal      R5
+
+        j        L1094
+L1092:
+L1095:
+        lw       $t0, 4($sp)
+        li       $t1, 5
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 7
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 12
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 32
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 39
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 35
+        sne      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 36
+        sne      $t4, $t4, $t5
+        and      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q104
+        j        Q105
+Q104:
+        j        L1130
+Q105:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1131:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1131
+        move     $a0, $t0
+        jal      R5
+
+        j        L1132
+L1130:
+L1133:
+        lw       $t0, 4($sp)
+        li       $t1, 6
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 6
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 8
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 11
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 12
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 31
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 33
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 38
+        sge      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 40
+        sle      $t4, $t4, $t5
+        and      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q106
+        j        Q107
+Q106:
+        j        L1176
+Q107:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1177:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1177
+        move     $a0, $t0
+        jal      R5
+
+        j        L1178
+L1176:
+L1179:
+        lw       $t0, 4($sp)
+        li       $t1, 7
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 5
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 7
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 11
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 12
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 30
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 33
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 39
+        sge      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 41
+        sle      $t4, $t4, $t5
+        and      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q108
+        j        Q109
+Q108:
+        j        L1222
+Q109:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1223:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1223
+        move     $a0, $t0
+        jal      R5
+
+        j        L1224
+L1222:
+L1225:
+        lw       $t0, 4($sp)
+        li       $t1, 8
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 4
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 6
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 11
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 12
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 29
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 34
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 40
+        sge      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 42
+        sle      $t4, $t4, $t5
+        and      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q110
+        j        Q111
+Q110:
+        j        L1268
+Q111:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1269:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1269
+        move     $a0, $t0
+        jal      R5
+
+        j        L1270
+L1268:
+L1271:
+        lw       $t0, 4($sp)
+        li       $t1, 9
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 3
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 5
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 11
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 18
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 28
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 30
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 33
+        sge      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 35
+        sle      $t4, $t4, $t5
+        and      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 41
+        sge      $t4, $t4, $t5
+        lw       $t5, 8($sp)
+        li       $t6, 43
+        sle      $t5, $t5, $t6
+        and      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 59
+        seq      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 60
+        seq      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q112
+        j        Q113
+Q112:
+        j        L1322
+Q113:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1323:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1323
+        move     $a0, $t0
+        jal      R5
+
+        j        L1324
+L1322:
+L1325:
+        lw       $t0, 4($sp)
+        li       $t1, 10
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 2
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 4
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 11
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 19
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 27
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 29
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 34
+        sge      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 36
+        sle      $t4, $t4, $t5
+        and      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 42
+        sge      $t4, $t4, $t5
+        lw       $t5, 8($sp)
+        li       $t6, 44
+        sle      $t5, $t5, $t6
+        and      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 52
+        sge      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 68
+        sle      $t4, $t4, $t5
+        and      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q114
+        j        Q115
+Q114:
+        j        L1376
+Q115:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1377:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1377
+        move     $a0, $t0
+        jal      R5
+
+        j        L1378
+L1376:
+L1379:
+        lw       $t0, 4($sp)
+        li       $t1, 11
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 2
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 3
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 17
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 19
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 27
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 28
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 35
+        sge      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 37
+        sle      $t4, $t4, $t5
+        and      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 42
+        sge      $t4, $t4, $t5
+        lw       $t5, 8($sp)
+        li       $t6, 44
+        sle      $t5, $t5, $t6
+        and      $t4, $t4, $t5
+        or       $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 52
+        sge      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 68
+        sle      $t4, $t4, $t5
+        and      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q116
+        j        Q117
+Q116:
+        j        L1430
+Q117:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1431:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1431
+        move     $a0, $t0
+        jal      R5
+
+        j        L1432
+L1430:
+L1433:
+        lw       $t0, 4($sp)
+        li       $t1, 12
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 16
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 18
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 36
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 38
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 41
+        sge      $t3, $t3, $t4
+        lw       $t4, 8($sp)
+        li       $t5, 43
+        sle      $t4, $t4, $t5
+        and      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q118
+        j        Q119
+Q118:
+        j        L1468
+Q119:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1469:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1469
+        move     $a0, $t0
+        jal      R5
+
+        j        L1470
+L1468:
+L1471:
+        lw       $t0, 4($sp)
+        li       $t1, 13
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 15
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 17
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 37
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 42
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q120
+        j        Q121
+Q120:
+        j        L1498
+Q121:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1499:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1499
+        move     $a0, $t0
+        jal      R5
+
+        j        L1500
+L1498:
+L1501:
+        lw       $t0, 4($sp)
+        li       $t1, 14
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 14
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 16
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 38
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 41
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q122
+        j        Q123
+Q122:
+        j        L1528
+Q123:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1529:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1529
+        move     $a0, $t0
+        jal      R5
+
+        j        L1530
+L1528:
+L1531:
+        lw       $t0, 4($sp)
+        li       $t1, 15
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 13
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 15
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 38
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 40
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q124
+        j        Q125
+Q124:
+        j        L1558
+Q125:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1559:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1559
+        move     $a0, $t0
+        jal      R5
+
+        j        L1560
+L1558:
+L1561:
+        lw       $t0, 4($sp)
+        li       $t1, 16
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 12
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 14
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 37
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 39
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q126
+        j        Q127
+Q126:
+        j        L1588
+Q127:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1589:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1589
+        move     $a0, $t0
+        jal      R5
+
+        j        L1590
+L1588:
+L1591:
+        lw       $t0, 4($sp)
+        li       $t1, 17
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 11
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 13
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 36
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 38
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q128
+        j        Q129
+Q128:
+        j        L1618
+Q129:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1619:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1619
+        move     $a0, $t0
+        jal      R5
+
+        j        L1620
+L1618:
+L1621:
+        lw       $t0, 4($sp)
+        li       $t1, 18
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 10
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 12
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 35
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 37
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q130
+        j        Q131
+Q130:
+        j        L1648
+Q131:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1649:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1649
+        move     $a0, $t0
+        jal      R5
+
+        j        L1650
+L1648:
+L1651:
+        lw       $t0, 4($sp)
+        li       $t1, 19
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 10
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 11
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 35
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 36
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 59
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 60
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q132
+        j        Q133
+Q132:
+        j        L1678
+Q133:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1679:
+        .byte 58, 0
+        .align 2
+        .text
+        la       $t0, L1679
+        move     $a0, $t0
+        jal      R5
+
+L1678:
+L1650:
+L1620:
+L1590:
+L1560:
+L1530:
+L1500:
+L1470:
+L1432:
+L1378:
+L1324:
+L1270:
+L1224:
+L1178:
+L1132:
+L1094:
+L1064:
+L1034:
+L1680:
+        lw       $t0, 4($sp)
+        li       $t1, 2
+        sge      $t0, $t0, $t1
+        lw       $t1, 4($sp)
+        li       $t2, 9
+        sle      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        lw       $t1, 4($sp)
+        li       $t2, 12
+        sge      $t1, $t1, $t2
+        lw       $t2, 4($sp)
+        li       $t3, 19
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        or       $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 58
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 61
+        seq      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 65
+        seq      $t3, $t3, $t4
+        or       $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q134
+        j        Q135
+Q134:
+        j        L1707
+Q135:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1708:
+        .byte 124, 0
+        .align 2
+        .text
+        la       $t0, L1708
+        move     $a0, $t0
+        jal      R5
+
+L1707:
+L1709:
+        lw       $t0, 4($sp)
+        li       $t1, 3
+        sge      $t0, $t0, $t1
+        lw       $t1, 4($sp)
+        li       $t2, 8
+        sle      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 13
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 17
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q136
+        j        Q137
+Q136:
+        j        L1724
+Q137:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1725:
+        .byte 124, 0
+        .align 2
+        .text
+        la       $t0, L1725
+        move     $a0, $t0
+        jal      R5
+
+        j        L1726
+L1724:
+L1727:
+        lw       $t0, 4($sp)
+        li       $t1, 6
+        sge      $t0, $t0, $t1
+        lw       $t1, 4($sp)
+        li       $t2, 10
+        sle      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 10
+        seq      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q138
+        j        Q139
+Q138:
+        j        L1738
+Q139:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1739:
+        .byte 124, 0
+        .align 2
+        .text
+        la       $t0, L1739
+        move     $a0, $t0
+        jal      R5
+
+        j        L1740
+L1738:
+L1741:
+        lw       $t0, 4($sp)
+        li       $t1, 10
+        seq      $t0, $t0, $t1
+        lw       $t1, 4($sp)
+        li       $t2, 11
+        seq      $t1, $t1, $t2
+        or       $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 51
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 69
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 74
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q140
+        j        Q141
+Q140:
+        j        L1760
+Q141:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1761:
+        .byte 124, 0
+        .align 2
+        .text
+        la       $t0, L1761
+        move     $a0, $t0
+        jal      R5
+
+L1760:
+L1740:
+L1726:
+L1762:
+        lw       $t0, 4($sp)
+        li       $t1, 11
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 11
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 15
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q142
+        j        Q143
+Q142:
+        j        L1773
+Q143:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1774:
+        .byte 126, 0
+        .align 2
+        .text
+        la       $t0, L1774
+        move     $a0, $t0
+        jal      R5
+
+        j        L1775
+L1773:
+L1776:
+        lw       $t0, 4($sp)
+        li       $t1, 12
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 52
+        sge      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 57
+        sle      $t2, $t2, $t3
+        and      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 62
+        sge      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 68
+        sle      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        lw       $t3, 8($sp)
+        li       $t4, 65
+        sne      $t3, $t3, $t4
+        and      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q144
+        j        Q145
+Q144:
+        j        L1799
+Q145:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1800:
+        .byte 126, 0
+        .align 2
+        .text
+        la       $t0, L1800
+        move     $a0, $t0
+        jal      R5
+
+        j        L1801
+L1799:
+L1802:
+        lw       $t0, 4($sp)
+        li       $t1, 20
+        seq      $t0, $t0, $t1
+        lw       $t1, 8($sp)
+        li       $t2, 59
+        seq      $t1, $t1, $t2
+        lw       $t2, 8($sp)
+        li       $t3, 60
+        seq      $t2, $t2, $t3
+        or       $t1, $t1, $t2
+        and      $t0, $t0, $t1
+        beqz     $t0, Q146
+        j        Q147
+Q146:
+        j        L1813
+Q147:
+        li       $t0, 1
+        sw       $t0, 12($sp)
+        .data
+L1814:
+        .byte 126, 0
+        .align 2
+        .text
+        la       $t0, L1814
+        move     $a0, $t0
+        jal      R5
+
+L1813:
+L1801:
+L1775:
+L1815:
+        lw       $t0, 12($sp)
+        li       $t1, 0
+        seq      $t0, $t0, $t1
+        beqz     $t0, Q148
+        j        Q149
+Q148:
+        j        L1818
+Q149:
+        .data
+L1819:
+        .byte 32, 0
+        .align 2
+        .text
+        la       $t0, L1819
+        move     $a0, $t0
+        jal      R5
+
+L1818:
+        lw       $t0, 8($sp)
+        li       $t1, 1
+        addu     $t0, $t0, $t1
+        sw       $t0, 8($sp)
+        j        L6
+L9:
+        lw       $t0, 4($sp)
+        li       $t1, 1
+        addu     $t0, $t0, $t1
+        sw       $t0, 4($sp)
+        .data
+L1824:
+        .byte 10, 0
+        .align 2
+        .text
+        la       $t0, L1824
+        move     $a0, $t0
+        jal      R5
+
+        j        L2
+L5:
+
+L1:
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 16
+        jr       $ra
+
+
+R6:
+        subu     $sp, $sp, 8
+        sw       $ra, 0($sp)
+        li       $v0, 4
+        syscall
+
+        li       $v0, 10
+        syscall
+
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 8
+        jr       $ra
+
+
+R0:
+        subu     $sp, $sp, 4
+        sw       $ra, 0($sp)
+        .data
+RGCS:
+        .space 4
+        .text
+        li       $v0, 8
+        la       $a0, RGCS
+        li       $a1, 2
+        syscall
+        move     $t0, $a0
+        lb       $t1, 0($t0)
+        beqz     $t1, RGC1
+        move     $v0, $t1
+        j        RGC2
+RGC1:
+        li       $t1, 1
+        negu     $t1, $t1
+        move     $v0, $t1
+RGC2:
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 4
+        jr       $ra
+
+
+R1:
+        li       $v0, 10
+        syscall
+
+R2:
+        subu     $sp, $sp, 8
+        sw       $ra, 0($sp)
+        sw       $a0, 4($sp)
+        lw       $t0, 4($sp)
+        beqz     $t0, RBL1
+        .data
+RBS1:
+        .byte 116, 114, 117, 101, 0
+        .text
+        li       $v0, 4
+        la       $a0, RBS1
+        syscall
+
+        j        RBL2
+RBL1:
+        .data
+RBS2:
+        .byte 102, 97, 108, 115, 101, 0
+        .text
+        li       $v0, 4
+        la       $a0, RBS2
+        syscall
+
+RBL2:
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 8
+        jr       $ra
+
+
+R3:
+        subu     $sp, $sp, 8
+        sw       $ra, 0($sp)
+        li       $v0, 11
+        syscall
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 8
+        jr       $ra
+
+
+R4:
+        subu     $sp, $sp, 8
+        sw       $ra, 0($sp)
+        li       $v0, 1
+        syscall
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 8
+        jr       $ra
+
+
+R5:
+        subu     $sp, $sp, 8
+        sw       $ra, 0($sp)
+        li       $v0, 4
+        syscall
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 8
+        jr       $ra

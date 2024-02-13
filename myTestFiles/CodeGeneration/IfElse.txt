@@ -1,0 +1,23 @@
+max(){
+	int yellow;
+	yellow = 3;
+	
+	prints("yellow: ");
+	printi(yellow);
+	
+	if(yellow == 4){ //-----------------------------------------------------
+		prints("\n");
+		printi(4);
+		yellow = yellow + 1;
+	}
+	else if(yellow == 3) { //-----------------------------------------------------
+		prints("\n");
+		printi(3);
+		yellow = yellow + 2;
+	}
+	else { //-----------------------------------------------------
+		prints("\n");
+		printi(2);
+		yellow = yellow + 3;
+	}
+}

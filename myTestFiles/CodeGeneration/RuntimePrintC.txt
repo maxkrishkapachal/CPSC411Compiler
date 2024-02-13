@@ -1,0 +1,25 @@
+max(){
+	int red;
+	int blue;
+	int green;
+	int yellow;
+
+	red = 10;
+	blue = 64;
+	green = 115;
+	yellow = 97;
+
+	prints("red, 10: ");
+	printc(red); //-------------------------------------------------
+	
+	prints("\nblue, 64: ");
+	printc(blue); //-------------------------------------------------
+	
+	prints("\ngreen, 115: ");
+	printc(green); //-------------------------------------------------
+	
+	prints("\nyellow, 97: ");
+	printc(yellow); //-------------------------------------------------
+	
+	prints("\n");
+}

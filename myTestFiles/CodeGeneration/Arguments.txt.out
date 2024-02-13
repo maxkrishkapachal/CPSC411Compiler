@@ -1,0 +1,383 @@
+        .text
+        .globl main
+main:
+        jal      M0
+        li       $v0, 10
+        syscall
+
+
+M0:
+        subu     $sp, $sp, 12
+        sw       $ra, 0($sp)
+        li       $t0, 9
+        sw       $t0, 4($sp)
+        li       $t0, 7
+        sw       $t0, 8($sp)
+        .data
+L1:
+        .byte 121, 101, 108, 108, 111, 119, 58, 32, 0
+        .align 2
+        .text
+        la       $t0, L1
+        move     $a0, $t0
+        jal      R5
+
+        lw       $t0, 4($sp)
+        move     $a0, $t0
+        jal      R4
+
+        .data
+L2:
+        .byte 10, 67, 111, 110, 115, 116, 97, 110, 116, 32, 97, 114, 103, 117, 109, 101, 110, 116, 58, 32, 0
+        .align 2
+        .text
+        la       $t0, L2
+        move     $a0, $t0
+        jal      R5
+
+        li       $t0, 9
+        move     $a0, $t0
+        jal      F0
+
+        move     $t0, $v0
+        sw       $t0, 4($sp)
+        lw       $t0, 4($sp)
+        move     $a0, $t0
+        jal      R4
+
+        .data
+L3:
+        .byte 10, 86, 97, 114, 105, 97, 98, 108, 101, 32, 97, 114, 103, 117, 109, 101, 110, 116, 58, 32, 0
+        .align 2
+        .text
+        la       $t0, L3
+        move     $a0, $t0
+        jal      R5
+
+        lw       $t0, 8($sp)
+        move     $a0, $t0
+        jal      F0
+
+        move     $t0, $v0
+        sw       $t0, 4($sp)
+        lw       $t0, 4($sp)
+        move     $a0, $t0
+        jal      R4
+
+        .data
+L4:
+        .byte 10, 70, 117, 110, 99, 116, 105, 111, 110, 32, 99, 97, 108, 108, 32, 97, 114, 103, 117, 109, 101, 110, 116, 32, 119, 105, 116, 104, 32, 110, 111, 32, 110, 101, 115, 116, 101, 100, 32, 97, 114, 103, 117, 109, 101, 110, 116, 115, 58, 32, 0
+        .align 2
+        .text
+        la       $t0, L4
+        move     $a0, $t0
+        jal      R5
+
+        jal      F2
+
+        move     $t0, $v0
+        move     $a0, $t0
+        jal      F0
+
+        move     $t0, $v0
+        sw       $t0, 4($sp)
+        lw       $t0, 4($sp)
+        move     $a0, $t0
+        jal      R4
+
+        .data
+L5:
+        .byte 10, 70, 117, 110, 99, 116, 105, 111, 110, 32, 99, 97, 108, 108, 32, 97, 114, 103, 117, 109, 101, 110, 116, 32, 119, 105, 116, 104, 32, 110, 101, 115, 116, 101, 100, 32, 97, 114, 103, 117, 109, 101, 110, 116, 115, 58, 32, 0
+        .align 2
+        .text
+        la       $t0, L5
+        move     $a0, $t0
+        jal      R5
+
+        lw       $t0, 8($sp)
+        lw       $t1, 8($sp)
+        move     $a0, $t0
+        move     $a1, $t1
+        jal      F1
+
+        move     $t0, $v0
+        move     $a0, $t0
+        jal      F0
+
+        move     $t0, $v0
+        sw       $t0, 4($sp)
+        lw       $t0, 4($sp)
+        move     $a0, $t0
+        jal      R4
+
+        .data
+L6:
+        .byte 10, 77, 97, 110, 121, 32, 110, 101, 115, 116, 101, 100, 32, 97, 114, 103, 117, 109, 101, 110, 116, 115, 32, 97, 110, 100, 32, 102, 117, 110, 99, 116, 105, 111, 110, 32, 99, 97, 108, 108, 115, 58, 32, 0
+        .align 2
+        .text
+        la       $t0, L6
+        move     $a0, $t0
+        jal      R5
+
+        li       $t0, 3
+        li       $t1, 8
+        move     $a0, $t0
+        move     $a1, $t1
+        jal      F1
+
+        move     $t0, $v0
+
+        subu     $sp, $sp, 4
+        sw       $t0, 0($sp)
+
+        jal      F2
+
+        move     $t1, $v0
+
+        lw       $t0, 0($sp)
+        addu     $sp, $sp, 4
+
+
+        subu     $sp, $sp, 8
+        sw       $t0, 0($sp)
+
+        sw       $t1, 4($sp)
+
+        lw       $t2, 16($sp)
+        li       $t3, 4
+        move     $a0, $t2
+        move     $a1, $t3
+        jal      F1
+
+        move     $t2, $v0
+        move     $a0, $t2
+        jal      F0
+
+        move     $t2, $v0
+
+        lw       $t0, 0($sp)
+
+        lw       $t1, 4($sp)
+        addu     $sp, $sp, 8
+
+        move     $a0, $t0
+        move     $a1, $t1
+        move     $a2, $t2
+        jal      F3
+
+        move     $t0, $v0
+        sw       $t0, 4($sp)
+        lw       $t0, 4($sp)
+        move     $a0, $t0
+        jal      R4
+
+        .data
+L7:
+        .byte 10, 0
+        .align 2
+        .text
+        la       $t0, L7
+        move     $a0, $t0
+        jal      R5
+
+
+L0:
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 12
+        jr       $ra
+
+F0:
+        subu     $sp, $sp, 8
+        sw       $ra, 0($sp)
+        sw       $a0, 4($sp)
+        lw       $t0, 4($sp)
+        li       $t1, 3
+        addu     $t0, $t0, $t1
+        move     $v0, $t0
+        j        L8
+        .data
+L11:
+        .byte 70, 117, 110, 99, 116, 105, 111, 110, 32, 34, 106, 97, 110, 115, 111, 110, 34, 32, 109, 117, 115, 116, 32, 104, 97, 118, 101, 32, 97, 32, 114, 101, 116, 117, 114, 110, 32, 118, 97, 108, 117, 101, 46, 10, 0
+        .align 2
+        .text
+        la       $a0, L11
+        j        R6
+
+L8:
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 8
+        jr       $ra
+
+F1:
+        subu     $sp, $sp, 12
+        sw       $ra, 0($sp)
+        sw       $a0, 4($sp)
+        sw       $a1, 8($sp)
+        lw       $t0, 4($sp)
+        lw       $t1, 8($sp)
+        mul      $t0, $t0, $t1
+        sw       $t0, 4($sp)
+        lw       $t0, 4($sp)
+        move     $v0, $t0
+        j        L12
+        .data
+L15:
+        .byte 70, 117, 110, 99, 116, 105, 111, 110, 32, 34, 107, 114, 105, 115, 104, 107, 97, 34, 32, 109, 117, 115, 116, 32, 104, 97, 118, 101, 32, 97, 32, 114, 101, 116, 117, 114, 110, 32, 118, 97, 108, 117, 101, 46, 10, 0
+        .align 2
+        .text
+        la       $a0, L15
+        j        R6
+
+L12:
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 12
+        jr       $ra
+
+F2:
+        subu     $sp, $sp, 4
+        sw       $ra, 0($sp)
+        li       $t0, 4
+        move     $v0, $t0
+        j        L16
+        .data
+L17:
+        .byte 70, 117, 110, 99, 116, 105, 111, 110, 32, 34, 112, 97, 99, 104, 97, 108, 34, 32, 109, 117, 115, 116, 32, 104, 97, 118, 101, 32, 97, 32, 114, 101, 116, 117, 114, 110, 32, 118, 97, 108, 117, 101, 46, 10, 0
+        .align 2
+        .text
+        la       $a0, L17
+        j        R6
+
+L16:
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 4
+        jr       $ra
+
+F3:
+        subu     $sp, $sp, 16
+        sw       $ra, 0($sp)
+        sw       $a0, 4($sp)
+        sw       $a1, 8($sp)
+        sw       $a2, 12($sp)
+        lw       $t0, 4($sp)
+        lw       $t1, 8($sp)
+        mul      $t0, $t0, $t1
+        lw       $t1, 12($sp)
+        addu     $t0, $t0, $t1
+        move     $v0, $t0
+        j        L18
+        .data
+L23:
+        .byte 70, 117, 110, 99, 116, 105, 111, 110, 32, 34, 109, 97, 120, 105, 109, 105, 108, 105, 97, 110, 34, 32, 109, 117, 115, 116, 32, 104, 97, 118, 101, 32, 97, 32, 114, 101, 116, 117, 114, 110, 32, 118, 97, 108, 117, 101, 46, 10, 0
+        .align 2
+        .text
+        la       $a0, L23
+        j        R6
+
+L18:
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 16
+        jr       $ra
+
+
+R6:
+        subu     $sp, $sp, 8
+        sw       $ra, 0($sp)
+        li       $v0, 4
+        syscall
+
+        li       $v0, 10
+        syscall
+
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 8
+        jr       $ra
+
+
+R0:
+        subu     $sp, $sp, 4
+        sw       $ra, 0($sp)
+        .data
+RGCS:
+        .space 4
+        .text
+        li       $v0, 8
+        la       $a0, RGCS
+        li       $a1, 2
+        syscall
+        move     $t0, $a0
+        lb       $t1, 0($t0)
+        beqz     $t1, RGC1
+        move     $v0, $t1
+        j        RGC2
+RGC1:
+        li       $t1, 1
+        negu     $t1, $t1
+        move     $v0, $t1
+RGC2:
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 4
+        jr       $ra
+
+
+R1:
+        li       $v0, 10
+        syscall
+
+R2:
+        subu     $sp, $sp, 8
+        sw       $ra, 0($sp)
+        sw       $a0, 4($sp)
+        lw       $t0, 4($sp)
+        beqz     $t0, RBL1
+        .data
+RBS1:
+        .byte 116, 114, 117, 101, 0
+        .text
+        li       $v0, 4
+        la       $a0, RBS1
+        syscall
+
+        j        RBL2
+RBL1:
+        .data
+RBS2:
+        .byte 102, 97, 108, 115, 101, 0
+        .text
+        li       $v0, 4
+        la       $a0, RBS2
+        syscall
+
+RBL2:
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 8
+        jr       $ra
+
+
+R3:
+        subu     $sp, $sp, 8
+        sw       $ra, 0($sp)
+        li       $v0, 11
+        syscall
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 8
+        jr       $ra
+
+
+R4:
+        subu     $sp, $sp, 8
+        sw       $ra, 0($sp)
+        li       $v0, 1
+        syscall
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 8
+        jr       $ra
+
+
+R5:
+        subu     $sp, $sp, 8
+        sw       $ra, 0($sp)
+        li       $v0, 4
+        syscall
+        lw       $ra, 0($sp)
+        addu     $sp, $sp, 8
+        jr       $ra

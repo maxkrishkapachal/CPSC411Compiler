@@ -1,0 +1,19 @@
+max(){
+	prints("My name is Max :)\n"); //-------------------------------------------------
+	prints("This is my string test file.\n\n"); //-------------------------------------------------
+	printc(1);
+	printc(2);
+	printc(1);
+	printc(2);
+	printc(1);
+	printc(2);
+	prints("\n\nRazzle Dazzle!\n\n");
+	printc(1);
+	printc(2);
+	printc(1);
+	printc(2);
+	printc(1);
+	printc(2);
+	prints("\n");
+	prints("In QtSpim, those are smiley faces!\n");
+}

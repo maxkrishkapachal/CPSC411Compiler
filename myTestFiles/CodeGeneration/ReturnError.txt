@@ -1,0 +1,23 @@
+max(){
+	int red;
+	red = janson();
+	prints("red: ");
+	printi(red);
+}
+
+int janson(){
+	int blue;
+	blue = 1;
+	prints("\nblue: ");
+	printi(blue);
+	if(blue == 2){
+		return 2;
+	}
+	if(blue == 3){
+		return 3;
+	}
+	if(blue == 4){
+		return 4;
+	}
+//-----------------------------------------------------
+}

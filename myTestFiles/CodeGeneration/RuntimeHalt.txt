@@ -1,0 +1,8 @@
+max(){
+	int blue;
+	int red; 
+	blue = 5;
+	red = 7;
+	prints("Halt! In the name of the law!\n");
+	halt(); //-------------------------------------------------
+}

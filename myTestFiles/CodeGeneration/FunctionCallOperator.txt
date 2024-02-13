@@ -1,0 +1,24 @@
+main(){
+	printi((blue() + red()) * green(3) + ( 9 * (purple(8, 2) - yellow(blue()))));
+	prints("\n");
+}
+
+int blue(){
+	return 7;
+}
+
+int red(){
+	return 10;
+}
+
+int green(int g){
+	return g * 3;
+}
+
+int purple(int p, int u){
+	return p / u;
+}
+
+int yellow(int y){
+	return 2 + y;
+}
