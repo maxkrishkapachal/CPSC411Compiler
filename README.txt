@@ -2,6 +2,8 @@ Maximilian Krishka-Pachal
 30061134
 max.krishkapachal@ucalgary.ca
 
+Compiles C code into MIPS code.
+
 Running my Compiler with the Script:
 1. Ensure all compiler build files are in the same folder.
 2. Ensure all test files are in the folder "myTestFiles" located in the same folder as the build files.
