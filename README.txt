@@ -1,7 +1,6 @@
 Maximilian Krishka-Pachal
 30061134
 max.krishkapachal@ucalgary.ca
-https://gitlab.cpsc.ucalgary.ca/max.krishkapachal/cpsc411compiler
 
 Running my Compiler with the Script:
 1. Ensure all compiler build files are in the same folder.
